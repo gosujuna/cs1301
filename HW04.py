@@ -26,6 +26,9 @@ def noteTaker(s):
 
     if l[-1] == '.':
         l[-1] = '$'
+    
+    if l[-1] == '?':
+        l[-1] = '&'
                 
      
             
@@ -44,6 +47,9 @@ def noteTaker(s):
 
         if final[i] == "$":
             final[i] = "."
+        
+        if final[i] == "&":
+            final[i] = "?"
 
     done = "".join(final)
         
