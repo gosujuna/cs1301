@@ -49,9 +49,7 @@ def noteTaker(s):
         
     return done
 
-notes = 'Li!sts are a co.ol datat,ype! They can hold a@ lot of infor:!mation.'
 
-print(noteTaker(notes))
 
 """
 Function name: foodDesertLocator()
