@@ -3,7 +3,7 @@
 Georgia Institute of Technology - CS1301
 HW05 - Advanced Lists, Tuples, and Modules
 """
-
+import math
 """
 Function name: summer_job()
 Parameters: jobs (list of tuples)
@@ -63,8 +63,18 @@ Parameters: names (list), surname (str)
 Returns: list
 """
 def ancestors(a,b):
+    j = []
+    ans = []
+    for i in a:
+        j.append(i.split())
 
-    return 0
+    for k in range(0,len(j)):
+        if j[k][1] == b and len(j[k]) == 2:
+
+            
+            ans.append(j[k][0])
+
+    return ans
 
 
 
@@ -75,7 +85,25 @@ Returns: float
 """
 
 def trignometry(a,b):
-    return 0
+    deg = float(a)
+
+    rad = math.radians(deg)
+
+    if b == "cosine":
+        return math.cosine(rad)
+
+     if b == "sine":
+        return math.sine(rad)
+    
+     if b == "tangent":
+        return math.tangent(rad)
+
+     else:
+         return rad
+    
+    
+
+    
 
 
 """
