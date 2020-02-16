@@ -107,10 +107,10 @@ def days_of_the_week(a,b):
     ans = []
 
     for i in a:
-        if calendar.weekday(b,i[1],i[0] == 4:
+        if calendar.weekday(b,i[1],i[0]) == 4:
                             ans.append(i[2])
                             
-        if calendar.weekday(b,i[1],i[0] == 5:
+        if calendar.weekday(b,i[1],i[0]) == 5:
                             ans.append(i[2])
 
     return ans
