@@ -23,7 +23,7 @@ def summer_job(a):
 
     return ans
 
-            
+
 
 
 """
@@ -32,22 +32,29 @@ Parameters: meals (list of list and tuples)
 Returns: tuple
 """
 
-foods= [["pizza","sand"],(1,2),(2,3)]
+
 
 def wasted_food(food):
     per = 0.0
     least = 100.0
     j = 0
-    for i in range(1,len(food)+1):
-        per = (100* food[i][1]) // food[i][0]
+    equalcheck = 0
+    for i in range(1,len(food)):
+        per = (100* food[i][1]) / food[i][0]
+        per = round(per,2)
         if least > per :
             least = per
             j = i
+            equalcheck = food[i][1]
+
+        if least == per and equalcheck > food[i][1]:
+            least = per
+            j = i
+            equalcheck = food[i][1]
 
             
     tuple = (food[0][j-1], least)    
     return tuple  
-        
         
 
 """
