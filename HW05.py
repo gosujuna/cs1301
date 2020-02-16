@@ -4,6 +4,9 @@ Georgia Institute of Technology - CS1301
 HW05 - Advanced Lists, Tuples, and Modules
 """
 import math
+import calendar
+
+from convert import conversion
 """
 Function name: summer_job()
 Parameters: jobs (list of tuples)
@@ -85,41 +88,39 @@ Returns: float
 """
 
 def trignometry(a,b):
-    deg = float(a)
-
-    rad = math.radians(deg)
-
+    degree = float(a)
+    rad = math.radians(degree)
     if b == "cosine":
-        return math.cosine(rad)
-
-     if b == "sine":
-        return math.sine(rad)
+        return round(math.cos(rad),2)
+    if b == "sine":
+        return round(math.sin(rad),2)
     
-     if b == "tangent":
-        return math.tangent(rad)
-
-     else:
-         return rad
+    if b == "tangent":
+        return round(math.tan(rad),2)
+    else:
+        return round(rad,2)
     
     
 
-    
 
-
-"""
-Function name: days_of_the_week()
-Parameters: birthdays (list of tuples), year (int)
-Returns: list
-"""
 def days_of_the_week(a,b):
-    return 0
+    ans = []
 
-"""
-Function name: donation_amount()
-Parameters: donations (list of strs)
-Returns: float
-"""
+    for i in a:
+        if calendar.weekday(b,i[1],i[0] == 4
+                            ans.append(i[2])
+        if calendar.weekday(b,i[1],i[0] == 5
+                            ans.append(i[2])
+
+    return ans
+
+
+
+        
 def donation_amount(a):
-    return 0
+    ans = 0
+    for i in a:
+        ans = ans + conversions[i]
 
-
+    return ans
+    
