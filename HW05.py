@@ -13,13 +13,15 @@ Returns: string
 def summer_job(a):
     pay = 0
     final = 0
+    d=0
+    
     for i in a:
         pay= i[1] * i[2] 
         if pay > final :
             final = pay
-            i[0] = d
+            d = i
 
-    return d
+    return a[d][0]
 
             
 
