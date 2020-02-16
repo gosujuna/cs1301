@@ -55,7 +55,9 @@ Function name: ancestors()
 Parameters: names (list), surname (str)
 Returns: list
 """
+def ancestors(a,b):
 
+    return 0
 
 
 
@@ -65,7 +67,8 @@ Parameters: degree (str), operation (str)
 Returns: float
 """
 
-
+def trignometry(a,b):
+    return 0
 
 
 """
@@ -73,11 +76,15 @@ Function name: days_of_the_week()
 Parameters: birthdays (list of tuples), year (int)
 Returns: list
 """
-
+def days_of_the_week(a,b):
+    return 0
 
 """
 Function name: donation_amount()
 Parameters: donations (list of strs)
 Returns: float
 """
+def donation_amount(a):
+    return 0
+
 
