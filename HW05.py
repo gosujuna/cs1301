@@ -13,15 +13,15 @@ Returns: string
 def summer_job(a):
     pay = 0
     final = 0
-    d=0
+    ans = ""
     
     for i in a:
         pay= i[1] * i[2] 
         if pay > final :
             final = pay
-            d = i
+            ans = i[0]
 
-    return a[d][0]
+    return ans
 
             
 
@@ -37,15 +37,15 @@ foods= [["pizza","sand"],(1,2),(2,3)]
 def wasted_food(food):
     per = 0.0
     least = 100.0
-    index = 0
+    j = 0
     for i in range(1,len(food)+1):
-        per = food[i][1] // food[i][0]
-        if least > per*100 :
+        per = (100* food[i][1]) // food[i][0]
+        if least > per :
             least = per
-            i = index
+            j = i
 
             
-    tuple = (food[0][index -1], least)    
+    tuple = (food[0][j-1], least)    
     return tuple  
         
         
