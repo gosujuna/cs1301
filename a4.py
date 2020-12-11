@@ -36,35 +36,33 @@ def flatten_list(l):
         return l[:]
 # ---------- end provided functions
 
-world = [["wow"],  [1,"hello", [ 1,2,100,999,"weldo"]], 1, 2, "hi","apple", " banana", "capybara", " anemone", "fish"]
+
 
 def search(list):
-    for i in range(len(list)):
+    for i in range(len(list)):  #this search function runs through a loop and returns the index of whatever was given as a parameter. returns -1 if its not found
         if list[i] == "weldo":
             return i
     return -1
 
 def wheres_weldo(world):
-    blank = []
-    flat = flatten_list(world)
-    ans = search(flat) 
-    print(ans)
-    if ans == -1 :
+    blank = [] #make blank answer
+    flat = flatten_list(world) #uses flatten function that was given
+    ans = search(flat) #Now list is flattended, we use the search function and get the index of it.
+    
+    if ans == -1 : #if the search function returns -1, the answer was not found so we return the blank list.
         return blank
     else: 
         j = (len(flat)**(1/2)) # length of square list 
-        k  = int(ans / j)
-        l = int(ans %  j)
-        blank.append(k)
-        blank.append(l)
+        k = int(ans / j)  # uses divide to find how many is in first index
+        l = int(ans %  j)  # uses mod to find how many is in second index
+        blank.append(k)  
+        blank.append(l)  #adds the found index to the blank list.
         return blank
-
-print(wheres_weldo(world))
 
 # --------- end your functions here
 
-#if __name__ == "__main__":
-    #import doctest
+if __name__ == "__main__":
+    import doctest
 
     # uncomment the line below to run your doctests
     #doctest.testmod()
